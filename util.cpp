@@ -1,4 +1,6 @@
 #include <math.h>
+#include <stdio.h>
+
 
 // arr1 : (n, k)
 // arr2 : (k, m)
@@ -42,5 +44,18 @@ void biasadd(float *result, float *bias, int n, int m)
 	{
 		for (int i = 0; i < m; i++)
 			result[batch*m + i] += bias[i];
+	}
+}
+
+void print_2d_array(const char *name, float *arr, int row, int col)
+{
+	printf("%s\n", name);
+	for (int y = 0; y < row; y++)
+	{
+		for (int x = 0; x < col; x++)
+		{
+			printf("%.3f ", arr[y*col + x]);
+		}
+		printf("\n");
 	}
 }

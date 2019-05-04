@@ -5,4 +5,4 @@ void sigmoid(float *result, int n, int m);
 void elem_multiply(float *arr1, float *arr2, float*result, int n, int m);
 void elem_add(float *arr1, float *arr2, float*result, int n, int m);
 void matmul(float *arr1, float *arr2, float *result, int n, int k, int m);
-
+void print_2d_array(const char *name, float *arr, int row, int col);
